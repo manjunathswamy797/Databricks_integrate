@@ -5,6 +5,8 @@ sampleData1 = [("bob","Developer",125000),("mark","Developer",108000),("carl","T
 it_df1 = spark.createDataFrame(sampleData1,schema=["Name","Role","Salary"])
 it_df1.orderBy('Role','salary').show()
 
+it_df1.count()
+
 # COMMAND ----------
 
 it_df1.createOrReplaceTempView('test')
